@@ -1,0 +1,13 @@
+name: 'Install Octopus CLI'
+description: 'Installs the Octopus CLI on the runner'
+author: 'trs'
+
+inputs:
+  version:
+    description: 'Version of Octopus CLI to install'
+    required: true
+    default: 'latest'
+
+runs:
+  using: 'shell'
+  command: './install-octopus-cli.sh ${{ inputs.version }}'
